@@ -9,7 +9,7 @@ class MergeSort {
         if (data.size <= 1) Pair(data, BigInteger.ZERO)
         else data.chunked(
             ceil(data.size / 2.0).toInt()
-        ).map{
+        ).map {
             mergeSort(it)
         }.let {
             merge(it[0].first, it[1].first, emptyList(),
